@@ -30,7 +30,7 @@ public class P006_AgregarAdicionalPage extends BasePage {
         try {
             doAddTextField("[Escenario " + sEscenarioID + "] " + "Ingresar modelo de equipo", buscador, i_equipo, false);
             doclickByJS("[Escenario " + sEscenarioID + "] " + "Elegir equipo", equipoSelkected, true);
-            wait(btnSeleccionarPlan);
+            wait("esperando elemento",btnSeleccionarPlan);
             doclickByJS("[Escenario " + sEscenarioID + "] " + "Clic_Seleccionar_Plan", btnSeleccionarPlan, false);
             doclickByJS("[Escenario " + sEscenarioID + "] " + "Elegir color", btnColor, false);
             doclickByJS("[Escenario " + sEscenarioID + "] " + "Clic_Pago_Contado", btnPagoTotal, false);
@@ -47,16 +47,16 @@ public class P006_AgregarAdicionalPage extends BasePage {
             System.out.println("Escoge SVA");
             if (i_Sva.equals("Bloque HD")){
                 System.out.println("Bloque HD");
-                doclickByJS("[Escenario " + sEscenarioID + "] " + "Escoger bloque HD: ", rdnBloqueHD, true);
+                doclickByJS("[Escenario " + sEscenarioID + "] " + "Escoger bloque HD ", rdnBloqueHD, true);
             }else if (i_Sva.equals("HBO")){
                 System.out.println("HBO");
-                doclickByJS("[Escenario " + sEscenarioID + "] " + "Escoger bloque HD: ", rdnHBO, true);
+                doclickByJS("[Escenario " + sEscenarioID + "] " + "Escoger bloque HD ", rdnHBO, true);
             }else if (i_Sva.equals("FOX")){
                 System.out.println("FOX");
-                doclickByJS("[Escenario " + sEscenarioID + "] " + "Escoger bloque HD: ", rdnFOX, true);
+                doclickByJS("[Escenario " + sEscenarioID + "] " + "Escoger bloque HD ", rdnFOX, true);
             }else if (i_Sva.equals("Bloque estelar")){
                 System.out.println("Bloque estelar");
-                doclickByJS("[Escenario " + sEscenarioID + "] " + "Escoger bloque HD: ", rdnBloqueEstelar, true);
+                doclickByJS("[Escenario " + sEscenarioID + "] " + "Escoger bloque HD ", rdnBloqueEstelar, true);
             }
             Thread.sleep(2000);
             doclickByJS("[Escenario " + sEscenarioID + "] " + "Click en Aceptar Cambios", btnGuardarCambios, true);

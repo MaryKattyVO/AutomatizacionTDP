@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="200.280467">
+<testcase classname="Flujo Gestion  de planta Movistar Total (Mantener fijo y agregarle un sva , Mantener lineas moviles), para un cliente , por canal Retail" name="Como Usuario activo de canal Retail, genero el URL para acceder a Web Convergente" time="105.60112">
+<system-out><![CDATA[Given Se consulta al servicio de Token del "1" respectivo...................passed
+When Se genera el link correspondiente a la sesion del "1"..................passed
+Then Ingreso a la ventana de login de Web Convergente.......................passed
+]]></system-out>
+</testcase>
+<testcase classname="Flujo Gestion  de planta Movistar Total (Mantener fijo y agregarle un sva , Mantener lineas moviles), para un cliente , por canal Retail" name="En canal Retail - Realizo G.P Movistar Total (MT)" time="94.679347">
+<system-out><![CDATA[Given En la Web Convergente, ingreso con el DNI del "10"....................passed
+When Elijo flujo a realizar correspondiente flujo retail gp "10"............passed
+]]></system-out>
+</testcase>
+</testsuite>

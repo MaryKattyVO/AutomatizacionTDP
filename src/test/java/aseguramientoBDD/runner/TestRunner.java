@@ -15,7 +15,7 @@ import java.io.File;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "src/test/resources/feature/GP1_Remoto.feature"
+		features = "src/test/resources/feature/RetailGP1.feature"
 //        features =  "src/test/resources/feature/" //Se ejecutaran todos los archivos features, por orden alfabetico segun especificado en el campo Feature.
         , plugin = {"com.cucumber.listener.ExtentCucumberFormatter:results/cucumber-reports/report.html",
         "junit:results/cucumber-reports/Cucumber.xml",

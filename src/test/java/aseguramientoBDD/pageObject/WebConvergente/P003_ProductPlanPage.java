@@ -15,6 +15,7 @@ import static org.testng.Assert.assertTrue;
 
 import aseguramientoBDD.pageObject.WebConvergente.P001_HomeMovistarPage;
 import cucumber.runtime.junit.ScenarioOutlineRunner;
+import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.testng.Assert;
 import aseguramientoBDD.helpers.BasePage;
 
@@ -45,10 +46,11 @@ public class P003_ProductPlanPage extends BasePage {
     public final static String btnAnadirNuevaLineaMovil2 = "/html[1]/body[1]/app-root[1]/div[1]/app-planes-products[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]";
     public final static String btnCargarOferta = "//*[contains(text(),'Mostrar ofertas')]";
     public final static String btnIniciarRegistro = "/html[1]/body[1]/app-root[1]/div[1]/app-summary-offer[1]/div[1]/app-summary-offer-bar-detail[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/button[1]";
+
     public final static String btnIniciarRegistroR = "//*[contains(text(),'Iniciar registro')]";
     public final static String btnOtrasOfertas = "//*[contains(text(),'Ver otras ofertas')]";
 
-    public final static String btnAnadirEquipo = "/html[1]/body[1]/app-root[1]/div[1]/app-summary-offer[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/app-summary-offer-line-movil[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/button[1]";
+    public final static String btnAnadirEquipo = "//body//div//div[1]//div[1]//div[1]//div[2]//div[1]//div[1]//div[1]//div[2]//app-summary-offer-line-movil[1]//div[1]//div[1]//div[1]//div[1]//div[2]//div[1]//div[2]//div[1]//button[1]";
     public final static String btnSVA = "/html/body/app-root/div/app-summary-offer/div[1]/div/div/div[2]/div/div/div/div[1]/app-summary-offer-line-fixed/div[1]/div/div/div/div[5]/button";
     public final static String lblSVA = "//*[contains(text(),'adicionales(SVAs)')]";
     public final static String btnMigrarFijo = "/html[1]/body[1]/app-root[1]/div[1]/app-planes-products[1]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/div[2]/app-card-plan-fixed[1]/div[2]/div[1]/div[2]";
@@ -59,6 +61,10 @@ public class P003_ProductPlanPage extends BasePage {
 
     public final static String btnCapl1 = "/html[1]/body[1]/app-root[1]/div[1]/app-planes-products[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/app-card-plan-movil[1]/div[2]";
     public final static String btnCapL2 = "/html[1]/body[1]/app-root[1]/div[1]/app-planes-products[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[2]/app-card-plan-movil[1]/div[2]";
+
+
+
+
 
     public final String lbl_namePlan(int stId) {
         return "/html[1]/body[1]/app-root[1]/div[1]/app-planes-products[1]/div[1]/div[2]/app-offer[1]/div[1]/div[4]/div[" + stId + "]/app-item-offer[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]";
@@ -71,10 +77,12 @@ public class P003_ProductPlanPage extends BasePage {
     }
 
     //Gestion de Planta
-    public final static String btnCambiarPlan = "/html[1]/body[1]/app-root[1]/div[1]/app-contracted-plan[1]/section[1]/div[1]/div[1]/div[3]/div[1]/button[1]";
-    public final static String btnCambiarEquipo = "/html[1]/body[1]/app-root[1]/div[1]/app-summary-offer[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/app-summary-offer-line-movil[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/button[1]";
-    public final static String btnMantenerPlan = "/html[1]/body[1]/app-root[1]/div[1]/app-planes-products[1]/div[1]/div[2]/app-offer[1]/div[1]/div[1]/div[1]/div[2]/app-item-offer[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/app-item-offer-price[1]/div[1]/div[2]/div[1]/div[1]/button[1]/span[1]";
+    public final static String btnCambiarPlan = "//*[contains(text(),'Cambiar Plan')]";
+    public final static String btnCambiarEquipo = "//*[contains(text(),'Cambiar equipo')]";
 
+    public final static String btnCambiarPlanRetail= "//button[@class='btn btn-default btn-success btn-block text-white formTextBtn']";
+    public final static String btnMostrarOfertasRetail="/html[1]/body[1]/app-root[1]/div[1]/app-planes-products[1]/div[1]/div[2]/div[2]/div[1]/div[1]/button[1]";
+    public final static String btnMantenerPlanRetail="/html[1]/body[1]/app-root[1]/div[1]/app-planes-products[1]/div[1]/div[2]/app-offer[1]/div[1]/div[1]/div[1]/div[2]/app-item-offer[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/app-item-offer-price[1]/div[1]/div[2]/div[1]/div[1]/button[1]";
     public boolean loadProductPlan(String UIName) throws Exception {
         boolean validacion = false;
         try {
@@ -242,23 +250,7 @@ public class P003_ProductPlanPage extends BasePage {
 
     public boolean addEquipoLinea1(String sEscenarioID) {
         try {
-            jsScrollIntoView("Bajar hasta expander footer", btnAnadirEquipo, false);
             doClick("[Escenario " + sEscenarioID + "] " + "Clic en boton Añadir Equipo", btnAnadirEquipo, true);
-            return true;
-        } catch (Exception e) {
-            e.printStackTrace();
-            Assert.fail("ERROR en doClickSeleccionar", e);
-            return false;
-        }
-    }
-
-    //Cambiar de equipo en GP
-    public boolean addEquipoLineagp(String sEscenarioID) {
-        try {
-            Thread.sleep(5000);
-            jsScrollIntoView("Bajar hasta expander footer", btnCambiarEquipo, false);
-            Thread.sleep(5000);
-            doClick("[Escenario " + sEscenarioID + "] " + "Clic en boton Cambiar equipo", btnCambiarEquipo, true);
             return true;
         } catch (Exception e) {
             e.printStackTrace();
@@ -270,7 +262,7 @@ public class P003_ProductPlanPage extends BasePage {
     public boolean addSVA(String sEscenarioID) throws Throwable {
         try {
             do {
-                doClick("[Escenario " + sEscenarioID + "] " + "Clic en boton Añadir SVA", btnSVA, true);
+                doClick("[Escenario " + sEscenarioID + "] " + "Clic en boton Añadir Equipo", btnSVA, true);
                 Thread.sleep(5000);
             } while (validateObjExist(lblSVA) == false);
             return true;
@@ -280,8 +272,6 @@ public class P003_ProductPlanPage extends BasePage {
         }
         return false;
     }
-
-
 
     public boolean doClickIniciarRegistro(String sEscenarioID) {
         try {
@@ -296,6 +286,18 @@ public class P003_ProductPlanPage extends BasePage {
 
 
 
+    public void IniciarRegistro( String sEscenarioID) {
+        try {
+            doclickByJS("[Escenario " + sEscenarioID + "] " + "Click_Boton_IniciarRegistro", btnIniciarRegistro, true);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            Assert.fail("ERROR en doClickIniciarRegistr", e);
+        }
+
+
+    }
+
     //*********************************************************************************************************************
 
                                                   /*    GESTION DE PLANTA    */
@@ -303,22 +305,28 @@ public class P003_ProductPlanPage extends BasePage {
     public void elegirFlujo(String i_Flujo, String sEscenarioID){
         try {
             if (i_Flujo.equals("GP - Migra")){
-                Thread.sleep(3000);
+                Thread.sleep(4000);
                 doclickByJS("Click en Camniar Plan", btnCambiarPlan, true);
                 jsScrollIntoView("Bajar hasta expander footer", btnOtrasOfertas, false);
                 doclickByJS("[Escenario " + sEscenarioID + "] " + "Click_Boton_VerOtrasOfertas", btnOtrasOfertas, true);
             }
             if (i_Flujo.equals("GP - CAEQ")){
-                Thread.sleep(3000);
+                Thread.sleep(4000);
                 doclickByJS("Click en Cambiar equipo", btnCambiarEquipo, true);
             }
+            if(i_Flujo.equals("GP - Mantener")){
+                Thread.sleep(14000);
+               // waitInvisibility("invisible","//app-contracted-plan[@class='ng-star-inserted']",true);
+                jsScrollIntoView("Bajar hasta expander footer", btnCambiarPlanRetail, false);
+                Thread.sleep(14000);
+                doclickByJS("Click en Cambiar Plan", btnCambiarPlanRetail, true);
+                Thread.sleep(7000);
+                jsScrollIntoView("Bajar hasta expander footer", btnMostrarOfertasRetail, false);
+                Thread.sleep(7000);
+                doclickByJS("[Escenario " + sEscenarioID + "] " + "Click_Boton_VerOtrasOfertas", btnMostrarOfertasRetail, true);
+                doclickByJS("[Escenario " + sEscenarioID + "] " + "Click_Boton_VerOtrasOfertas", btnMantenerPlanRetail, true);
 
-            if(i_Flujo.equals("GP - Mantener - equipo")){
-                Thread.sleep(3000);
-                doclickByJS("click en Cambiar Plan", btnCambiarPlan,true);
-                doclickByJS("Click en Mostrar Ofertas", btnCargarOferta,true);
-                doclickByJS("Bajar hasta expander footer", btnMantenerPlan,false);
-                doclickByJS("[Escenario " + sEscenarioID + "] " + "Click_Boton_Mantener", btnOtrasOfertas, true);
+
             }
 
         }catch (Exception e){
@@ -326,4 +334,10 @@ public class P003_ProductPlanPage extends BasePage {
             Assert.fail("ERROR en doClickIniciarRegistr", e);
         }
     }
+
+
+
+
+
+
 }

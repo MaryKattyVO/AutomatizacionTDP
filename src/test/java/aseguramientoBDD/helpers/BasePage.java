@@ -32,7 +32,7 @@ public class BasePage {
 
     private static WebDriver driver;
     //    public  WebDriver driver;
-    public static int defaultWaitingTime = 70000;
+    public static int defaultWaitingTime = 150;
     protected static ScreenshotUtility utilitarios = new ScreenshotUtility();
     public static String stepTestName;
     protected Reports reporte = new Reports();
@@ -57,14 +57,14 @@ public class BasePage {
     //Este método ingresa el texto.
     public void doAddTextField(String UIName, String objTechName, String text, Boolean screenshot) throws IOException, AWTException {
         try {
-            WebElement element = wait(objTechName);
+            WebElement element = wait(UIName,objTechName);
             element.clear();
             element.sendKeys(text);
             if (screenshot == true) {
                 utilitarios.takeScreenshot(UIName, driver);
                 ScreenshotUtility.saveAccion(UIName);
             }
-        } catch (AssertionError e) {
+        } catch (AssertionError | InterruptedException e) {
             e.getMessage();
             e.getStackTrace();
             e.printStackTrace();
@@ -76,13 +76,13 @@ public class BasePage {
 
     public void doClickLink(String UIName, String objTechName, Boolean screenshot) throws IOException, AWTException {
         try {
-            WebElement element = wait(objTechName);
+            WebElement element = wait(UIName,objTechName);
             if (screenshot == true) {
                 utilitarios.takeScreenshot(UIName, driver);
                 ScreenshotUtility.saveAccion(UIName);
             }
             element.click();
-        } catch (AssertionError e) {
+        } catch (AssertionError | InterruptedException e) {
             e.getMessage();
             e.getStackTrace();
             e.printStackTrace();
@@ -95,13 +95,13 @@ public class BasePage {
     //Método para hacer click al objeto.
     public void doClick(String UIName, String objTechName, Boolean screenshot) throws IOException, AWTException {
         try {
-            WebElement element = wait(objTechName);
+            WebElement element = wait(UIName,objTechName);
             if (screenshot == true) {
                 utilitarios.takeScreenshot(UIName, driver);
                 ScreenshotUtility.saveAccion(UIName);
             }
             element.click();
-        } catch (AssertionError e) {
+        } catch (AssertionError | InterruptedException e) {
             e.getMessage();
             e.getStackTrace();
             e.printStackTrace();
@@ -115,7 +115,7 @@ public class BasePage {
     public void doSelectDropdown(String UIName, String objTechName, String Value, Boolean screenshot)
             throws IOException, AWTException {
         try {
-            WebElement element = wait(objTechName);
+            WebElement element = wait(UIName,objTechName);
             Select dropdown = new Select(element);
             dropdown.selectByVisibleText(Value);
             //dropdown.selectByValue(Value);
@@ -123,7 +123,7 @@ public class BasePage {
                 utilitarios.takeScreenshot(UIName, driver);
                 ScreenshotUtility.saveAccion(UIName);
             }
-        } catch (AssertionError e) {
+        } catch (AssertionError | InterruptedException e) {
             e.getMessage();
             e.getStackTrace();
             e.printStackTrace();
@@ -136,7 +136,7 @@ public class BasePage {
     //Método para elegir la opción index del combo
     public void doSelectDropDownByindex(String UIName, String objTechName, int data, Boolean screenshot) throws Exception {
         try {
-            WebElement element = wait(objTechName);
+            WebElement element = wait(UIName,objTechName);
             Select dropdown = new Select(element);
             dropdown.selectByIndex(data);
             if (screenshot == true) {
@@ -156,7 +156,7 @@ public class BasePage {
     //Método para seleccionar el texto de la opción del elemento
     public void select(String UIName, String objTechName, String data) throws Exception {
         try {
-            WebElement element = wait(objTechName);
+            WebElement element = wait(UIName,objTechName);
             Select selectBox = new Select(element);
             selectBox.selectByVisibleText(data);
             utilitarios.takeScreenshot(UIName, driver);
@@ -175,11 +175,11 @@ public class BasePage {
     public void switchiframeToframe(String UIName, String objTechName) throws IOException, AWTException {
         try {
             System.out.println("Antes de to frame");
-            WebElement element = wait(objTechName);
+            WebElement element = wait(UIName,objTechName);
             driver.switchTo().frame(element);
             utilitarios.takeScreenshot(UIName, driver);
             ScreenshotUtility.saveAccion(UIName);
-        } catch (AssertionError e) {
+        } catch (AssertionError | InterruptedException e) {
             e.getMessage();
             e.getStackTrace();
             e.printStackTrace();
@@ -214,7 +214,7 @@ public class BasePage {
 
     public void moveMousewithRobot(String objTechName) {
         try {
-            WebElement element = wait(objTechName);
+            WebElement element = wait("Mover el mouse al objeto",objTechName);
             Point coordinates = element.getLocation();
             Robot robot = new Robot();
             robot.mouseMove(coordinates.getX(), coordinates.getY() + 120);
@@ -223,6 +223,10 @@ public class BasePage {
             e.getStackTrace();
             e.printStackTrace();
             Assert.fail("Fallo en dar Click", e);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -239,7 +243,7 @@ public class BasePage {
         boolean ActualPropertyValue = false;
         String prop = PropertyToBeVerified.toUpperCase();
         try {
-            WebElement element = wait(objectTechName);
+            WebElement element = wait(UIName,objectTechName);
 
             switch (properties.valueOf(prop)) {
                 case DISPLAYED:
@@ -275,10 +279,10 @@ public class BasePage {
     //No valida mayúsculas, ni minúsculas
     public boolean verifyText(String strText, String objTechName, String indice, Boolean screenshot) throws Exception {
         WebElement element = null;
-        element = wait(objTechName);
+        element = wait("verificar tecto _ "+ strText ,objTechName);
         try {
             WebDriverWait wait = new WebDriverWait(driver, defaultWaitingTime);
-            element = wait(objTechName);
+            element = wait("verificar tecto _ "+ strText ,objTechName);
             System.out.println("text:" + strText);
             System.out.println("text:" + element.getText());
             if (screenshot) {
@@ -300,7 +304,7 @@ public class BasePage {
     public String getlabel(String UIName, String objTechName) throws Exception {
         try {
 
-            WebElement element = wait(objTechName);
+            WebElement element = wait(UIName,objTechName);
             return element.getText();
         } catch (AssertionError e) {
             e.getMessage();
@@ -318,7 +322,7 @@ public class BasePage {
     public boolean verifyContainText(String strText, String objTechName) throws Exception {
         WebElement element = null;
         try {
-            element = wait(objTechName);
+            element = wait("verificar contedido"+strText,objTechName);
         } catch (AssertionError e) {
             e.getMessage();
             e.getStackTrace();
@@ -343,10 +347,10 @@ public class BasePage {
         return ActualPropertyValue;
     }
 
-    public WebElement returnWebElement(String objTechName) throws Exception {
+    public WebElement returnWebElement(String UIName,String objTechName) throws Exception {
         WebElement element = null;
         try {
-            element = wait(objTechName);
+            element = wait(UIName,objTechName);
 
         } catch (AssertionError e) {
             e.getMessage();
@@ -360,13 +364,19 @@ public class BasePage {
         return element;
     }
 
-    public static WebElement wait(String objTechName) {
+    public static WebElement wait(String UIName, String objTechName) throws InterruptedException, IOException, AWTException {
         WebDriverWait wait = new WebDriverWait(driver, defaultWaitingTime);
         WebElement element = null;
         try {
             element = wait.until(ExpectedConditions.visibilityOfElementLocated(ObjectMap.getLocator(objTechName)));
         } catch (Exception e) {
+
             e.printStackTrace();
+            Thread.sleep(1000);
+            utilitarios.takeScreenshot("ERROR_No se encuentra elemento_" + UIName, driver);
+            ScreenshotUtility.saveAccion("ERROR_No se encuentra elemento_" + UIName);
+            Assert.fail("Fallo la validacion del objeto",e);
+
         }
         return element;
     }
@@ -379,14 +389,14 @@ public class BasePage {
 
     public void doclickByJS(String UIName, String objTechName, boolean screenshot) throws IOException, AWTException {
         try {
-            WebElement element = wait(objTechName);
+            WebElement element = wait(UIName,objTechName);
             JavascriptExecutor jse = (JavascriptExecutor) driver;
             if (screenshot == true) {
                 utilitarios.takeScreenshot(UIName, driver);
                 ScreenshotUtility.saveAccion(UIName);
             }
             jse.executeScript("arguments[0].click()", element);
-        } catch (AssertionError e) {
+        } catch (AssertionError | InterruptedException e) {
             e.getMessage();
             e.getStackTrace();
             e.printStackTrace();
@@ -398,7 +408,7 @@ public class BasePage {
 
     public static void jsScrollIntoView(String UIName, String objTechName, boolean screenshot) throws Exception {
         try {
-            WebElement element = wait(objTechName);
+            WebElement element = wait(UIName,objTechName);
             JavascriptExecutor jse = (JavascriptExecutor) driver;
             jse.executeScript("arguments[0].scrollIntoView()", element);
         } catch (AssertionError e) {
@@ -515,6 +525,11 @@ public class BasePage {
         try {
             WebDriverWait wait = new WebDriverWait(driver, defaultWaitingTime);
             wait.until(ExpectedConditions.invisibilityOfElementLocated(ObjectMap.getLocator(objTechName)));
+
+            if (screenshot == true) {
+                utilitarios.takeScreenshot(UIName, driver);
+                ScreenshotUtility.saveAccion(UIName);
+            }
         } catch (Exception e) {
             e.printStackTrace();
             utilitarios.takeScreenshot("Error en  " + UIName, driver);
@@ -571,7 +586,7 @@ public class BasePage {
 
     public void DropFile(String UIName, File filePath, String objTechName, int offsetX, int offsetY, Boolean screenshot) throws IOException, AWTException {
         try {
-            WebElement element = wait(objTechName);
+            WebElement element = wait(UIName,objTechName);
             if (screenshot == true) {
                 utilitarios.takeScreenshot(UIName, driver);
                 ScreenshotUtility.saveAccion(UIName);

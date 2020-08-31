@@ -39,7 +39,6 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
-			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 		</ul>
 
@@ -53,7 +52,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Aug 30, 2020 10:10:07 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Aug 13, 2020 05:43:27 PM</span>
 				</a>
 			</li>
 			<li>
@@ -79,8 +78,6 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
-						<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -141,10 +138,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -156,10 +153,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>2</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>2</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -171,10 +168,10 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='25%'><span class='strong'>2</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>5</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='25%'>2</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='50%'>4</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -188,196 +185,70 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Flujo Gestion de planta Movistar Total (Mantener fijo, Mantener lineas moviles y agregarle un equipo), para un cliente , por canal Remoto</span>
-						<span class='test-time'>Aug 30, 2020 10:10:07 PM</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-name'>Flujo Gestion  de planta Movistar Total (Mantener fijo y agregarle un sva , Mantener lineas moviles), para un cliente , por canal Retail</span>
+						<span class='test-time'>Aug 13, 2020 05:43:27 PM</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
-<div class='scenariooutline node' test-id='2' status='fail'>
-	<span class='duration right label'>0h 0m 48s+139ms</span>
+<div class='scenariooutline node' test-id='2' status='pass'>
+	<span class='duration right label'>0h 1m 45s+969ms</span>
 	<div class='desc'>
 		<b>ScenarioOutline</b>
-		<span class="desc-text">Como Usuario activo de canal Remoto, genero el URL para acceder a Web Convergente</span>
+		<span class="desc-text">Como Usuario activo de canal Retail, genero el URL para acceder a Web Convergente</span>
 	</div>
 	<ul class='steps'>
-		<li test-id='3' class='node scenario fail' status='fail'>
+		<li test-id='3' class='node scenario pass' status='pass'>
 			<div class='category-list'>
 				<span class='category label white-text'>@SmokeTest</span>
 			</div>
 			
 			<b>Scenario</b>
 			
-			<span class="bdd-step-name">Como Usuario activo de canal Remoto, genero el URL para acceder a Web Convergente</span>
+			<span class="bdd-step-name">Como Usuario activo de canal Retail, genero el URL para acceder a Web Convergente</span>
 			
 				<ul class='steps'>
 					<li test-id='4' class='node given pass' status='pass'><b>Given</b>
-						<span class="bdd-step-name">Given Se consulta al servicio de Token del "2" respectivo</span>
+						<span class="bdd-step-name">Given Se consulta al servicio de Token del "1" respectivo</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='5' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When Se genera el link correspondiente a la sesion del "2"</span>
+						<span class="bdd-step-name">When Se genera el link correspondiente a la sesion del "1"</span>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='6' class='node then fail' status='fail'><b>Then</b>
+					<li test-id='6' class='node then pass' status='pass'><b>Then</b>
 						<span class="bdd-step-name">Then Ingreso a la ventana de login de Web Convergente</span>
-							<div class='pre'><pre>java.lang.AssertionError: Fallo en dar click a inicio
-	at org.testng.Assert.fail(Assert.java:85)
-	at aseguramientoBDD.tests.Tienda_Alta.ingreso_ventana_login(Tienda_Alta.java:125)
-	at ✽.Then Ingreso a la ventana de login de Web Convergente(src/test/resources/feature/GP1_Remoto.feature:7)
-Caused by: java.lang.AssertionError: ERROR en loadHomeMovistar
-	at org.testng.Assert.fail(Assert.java:85)
-	at aseguramientoBDD.pageObject.WebConvergente.P001_HomeMovistarPage.loadHomeMovistar(P001_HomeMovistarPage.java:32)
-	at aseguramientoBDD.pageObject.WebConvergente.P001_HomeMovistarPage.doLoadInicioLink(P001_HomeMovistarPage.java:41)
-	at aseguramientoBDD.tests.Tienda_Alta.ingreso_ventana_login(Tienda_Alta.java:119)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at cucumber.runtime.Utils$1.call(Utils.java:40)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
-	at cucumber.runtime.Utils.invoke(Utils.java:34)
-	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)
-	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
-	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
-	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
-	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
-	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
-	at cucumber.runtime.model.CucumberScenarioOutline.run(CucumberScenarioOutline.java:46)
-	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
-	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
-	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.util.ArrayList.forEach(ArrayList.java:1249)
-	at org.testng.TestRunner.privateRun(TestRunner.java:770)
-	at org.testng.TestRunner.run(TestRunner.java:591)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-	at org.testng.TestNG.runSuites(TestNG.java:1032)
-	at org.testng.TestNG.run(TestNG.java:1000)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:110)
-Caused by: java.lang.NullPointerException
-	at aseguramientoBDD.helpers.BasePage.ValidateObject(BasePage.java:246)
-	at aseguramientoBDD.pageObject.WebConvergente.P001_HomeMovistarPage.loadHomeMovistar(P001_HomeMovistarPage.java:28)
-	... 46 more
-</pre></div>
+							<div class='pre'>passed</div>
 					</li>
 				</ul>
 		</li>
 	</ul>
 </div>
-<div class='scenariooutline node' test-id='7' status='fail'>
-	<span class='duration right label'>0h 0m 0s+244ms</span>
+<div class='scenariooutline node' test-id='7' status='pass'>
+	<span class='duration right label'>0h 1m 34s+712ms</span>
 	<div class='desc'>
 		<b>ScenarioOutline</b>
-		<span class="desc-text">En canal Remoto - Realizo G.P Movistar Total (MT)</span>
+		<span class="desc-text">En canal Retail - Realizo G.P Movistar Total (MT)</span>
 	</div>
 	<ul class='steps'>
-		<li test-id='8' class='node scenario fail' status='fail'>
+		<li test-id='8' class='node scenario pass' status='pass'>
 			<div class='category-list'>
 				<span class='category label white-text'>@SmokeTest</span>
 			</div>
 			
 			<b>Scenario</b>
 			
-			<span class="bdd-step-name">En canal Remoto - Realizo G.P Movistar Total (MT)</span>
+			<span class="bdd-step-name">En canal Retail - Realizo G.P Movistar Total (MT)</span>
 			
 				<ul class='steps'>
-					<li test-id='9' class='node given fail' status='fail'><b>Given</b>
-						<span class="bdd-step-name">Given En la Web Convergente, ingreso con el DNI del "11"</span>
-							<div class='pre'><pre>java.lang.AssertionError: Fallo en login de cliente
-	at org.testng.Assert.fail(Assert.java:85)
-	at aseguramientoBDD.tests.Tienda_Alta.ingreso_del_consulto(Tienda_Alta.java:143)
-	at ✽.Given En la Web Convergente, ingreso con el DNI del "11"(src/test/resources/feature/GP1_Remoto.feature:14)
-Caused by: java.lang.AssertionError: ERROR en doAddTextFieldDocIdentPage
-	at org.testng.Assert.fail(Assert.java:85)
-	at aseguramientoBDD.pageObject.WebConvergente.P002_ConsultarCtePage.doAddTextFieldDocIdentPage(P002_ConsultarCtePage.java:49)
-	at aseguramientoBDD.pageObject.WebConvergente.P002_ConsultarCtePage.dniConsultingPage(P002_ConsultarCtePage.java:59)
-	at aseguramientoBDD.tests.Tienda_Alta.ingreso_del_consulto(Tienda_Alta.java:137)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at cucumber.runtime.Utils$1.call(Utils.java:40)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
-	at cucumber.runtime.Utils.invoke(Utils.java:34)
-	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)
-	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
-	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
-	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
-	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
-	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
-	at cucumber.runtime.model.CucumberScenarioOutline.run(CucumberScenarioOutline.java:46)
-	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
-	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
-	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.util.ArrayList.forEach(ArrayList.java:1249)
-	at org.testng.TestRunner.privateRun(TestRunner.java:770)
-	at org.testng.TestRunner.run(TestRunner.java:591)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-	at org.testng.TestNG.runSuites(TestNG.java:1032)
-	at org.testng.TestNG.run(TestNG.java:1000)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:110)
-Caused by: java.lang.NullPointerException
-	at aseguramientoBDD.helpers.BasePage.doAddTextField(BasePage.java:61)
-	at aseguramientoBDD.pageObject.WebConvergente.P002_ConsultarCtePage.doAddTextFieldDocIdentPage(P002_ConsultarCtePage.java:45)
-	... 46 more
-</pre></div>
+					<li test-id='9' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given En la Web Convergente, ingreso con el DNI del "10"</span>
+							<div class='pre'>passed</div>
 					</li>
-					<li test-id='10' class='node when skip' status='skip'><b>When</b>
-						<span class="bdd-step-name">When Elijo flujo a realizar correspondiente flujo remoto gp "11"</span>
-							<div class='pre'>skipped</div>
-					</li>
-					<li test-id='11' class='node and skip' status='skip'><b>And</b>
-						<span class="bdd-step-name">And Realizo una busqueda del plan para el "11"</span>
-							<div class='pre'>skipped</div>
-					</li>
-					<li test-id='12' class='node and skip' status='skip'><b>And</b>
-						<span class="bdd-step-name">And Para el canal Remoto, selecciono el plan para el "11" e inicio el registro de la venta</span>
-							<div class='pre'>skipped</div>
-					</li>
-					<li test-id='13' class='node then skip' status='skip'><b>Then</b>
-						<span class="bdd-step-name">Then Obtengo un código MT para el "11"</span>
-							<div class='pre'>skipped</div>
+					<li test-id='10' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When Elijo flujo a realizar correspondiente flujo retail gp "10"</span>
+							<div class='pre'>passed</div>
 					</li>
 				</ul>
 		</li>
@@ -439,13 +310,13 @@ Caused by: java.lang.NullPointerException
 					<div class='category-heading'>
 						<span class='category-name'>@SmokeTest</span>
 						<span class='category-status right'>
-							<span class='label fail'>2</span>
+							<span class='label pass'>2</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 2</span>
 							
-							<span class='label red lighten-1 white-text'>Failed: 2</span>
 							
 						</div>
 					
@@ -460,14 +331,14 @@ Caused by: java.lang.NullPointerException
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 30, 2020 10:10:08 PM</td>
-										<td class='linked' test-id='3'>Flujo Gestion de planta Movistar Total (Mantener fijo, Mantener lineas moviles y agregarle un equipo), para un cliente , por canal Remoto.Como Usuario activo de canal Remoto, genero el URL para acceder a Web Convergente.Como Usuario activo de canal Remoto, genero el URL para acceder a Web Convergente</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td>Aug 13, 2020 05:43:27 PM</td>
+										<td class='linked' test-id='3'>Flujo Gestion  de planta Movistar Total (Mantener fijo y agregarle un sva , Mantener lineas moviles), para un cliente , por canal Retail.Como Usuario activo de canal Retail, genero el URL para acceder a Web Convergente.Como Usuario activo de canal Retail, genero el URL para acceder a Web Convergente</td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Aug 30, 2020 10:10:55 PM</td>
-										<td class='linked' test-id='8'>Flujo Gestion de planta Movistar Total (Mantener fijo, Mantener lineas moviles y agregarle un equipo), para un cliente , por canal Remoto.En canal Remoto - Realizo G.P Movistar Total (MT).En canal Remoto - Realizo G.P Movistar Total (MT)</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td>Aug 13, 2020 05:45:13 PM</td>
+										<td class='linked' test-id='8'>Flujo Gestion  de planta Movistar Total (Mantener fijo y agregarle un sva , Mantener lineas moviles), para un cliente , por canal Retail.En canal Retail - Realizo G.P Movistar Total (MT).En canal Retail - Realizo G.P Movistar Total (MT)</td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -486,186 +357,6 @@ Caused by: java.lang.NullPointerException
 	</div>
 </div>
 <!-- category view -->
-<div id='exception-view' class='view hide'>
-
-    <section id='controls'>
-        <div class='controls grey lighten-4'>
-            <!-- search -->
-            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
-                <a href="#" class='search-div'>
-                    <i class='material-icons'>search</i> Search
-                </a>
-
-                <div class='input-field left hide'>
-                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
-                </div>
-
-            </div>
-            <!-- search -->
-        </div>
-    </section>
-
-    <div class='subview-left left'>
-
-        <div class='view-summary'>
-            <h5>Exceptions</h3>
-                <ul id='exception-collection' class='exception-collection'>
-
-                        <li class='exception displayed active'>
-                            <div class='exception-heading'>
-                                <span class='exception-name'>java.lang.AssertionError</span>
-                                <span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
-                            </div>
-                            <div class='exception-content hide'>
-                                <div class='exception-tests'>
-                                    <table class='bordered table-results'>
-                                        <thead>
-                                        <tr>
-                                            <th>Timestamp</th>
-                                            <th>TestName</th>
-                                            <th>Status</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                                    <tr>
-                                                        <td>Aug 30, 2020 10:10:44 PM</td>
-                                                        <td class='linked' test-id='6'>Flujo Gestion de planta Movistar Total (Mantener fijo, Mantener lineas moviles y agregarle un equipo), para un cliente , por canal Remoto.Como Usuario activo de canal Remoto, genero el URL para acceder a Web Convergente.Como Usuario activo de canal Remoto, genero el URL para acceder a Web Convergente.Then Ingreso a la ventana de login de Web Convergente</td>
-                                                        <td><pre><pre>java.lang.AssertionError: Fallo en dar click a inicio
-	at org.testng.Assert.fail(Assert.java:85)
-	at aseguramientoBDD.tests.Tienda_Alta.ingreso_ventana_login(Tienda_Alta.java:125)
-	at ✽.Then Ingreso a la ventana de login de Web Convergente(src/test/resources/feature/GP1_Remoto.feature:7)
-Caused by: java.lang.AssertionError: ERROR en loadHomeMovistar
-	at org.testng.Assert.fail(Assert.java:85)
-	at aseguramientoBDD.pageObject.WebConvergente.P001_HomeMovistarPage.loadHomeMovistar(P001_HomeMovistarPage.java:32)
-	at aseguramientoBDD.pageObject.WebConvergente.P001_HomeMovistarPage.doLoadInicioLink(P001_HomeMovistarPage.java:41)
-	at aseguramientoBDD.tests.Tienda_Alta.ingreso_ventana_login(Tienda_Alta.java:119)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at cucumber.runtime.Utils$1.call(Utils.java:40)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
-	at cucumber.runtime.Utils.invoke(Utils.java:34)
-	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)
-	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
-	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
-	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
-	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
-	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
-	at cucumber.runtime.model.CucumberScenarioOutline.run(CucumberScenarioOutline.java:46)
-	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
-	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
-	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.util.ArrayList.forEach(ArrayList.java:1249)
-	at org.testng.TestRunner.privateRun(TestRunner.java:770)
-	at org.testng.TestRunner.run(TestRunner.java:591)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-	at org.testng.TestNG.runSuites(TestNG.java:1032)
-	at org.testng.TestNG.run(TestNG.java:1000)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:110)
-Caused by: java.lang.NullPointerException
-	at aseguramientoBDD.helpers.BasePage.ValidateObject(BasePage.java:246)
-	at aseguramientoBDD.pageObject.WebConvergente.P001_HomeMovistarPage.loadHomeMovistar(P001_HomeMovistarPage.java:28)
-	... 46 more
-</pre></pre></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Aug 30, 2020 10:10:55 PM</td>
-                                                        <td class='linked' test-id='9'>Flujo Gestion de planta Movistar Total (Mantener fijo, Mantener lineas moviles y agregarle un equipo), para un cliente , por canal Remoto.En canal Remoto - Realizo G.P Movistar Total (MT).En canal Remoto - Realizo G.P Movistar Total (MT).Given En la Web Convergente, ingreso con el DNI del "11"</td>
-                                                        <td><pre><pre>java.lang.AssertionError: Fallo en login de cliente
-	at org.testng.Assert.fail(Assert.java:85)
-	at aseguramientoBDD.tests.Tienda_Alta.ingreso_del_consulto(Tienda_Alta.java:143)
-	at ✽.Given En la Web Convergente, ingreso con el DNI del "11"(src/test/resources/feature/GP1_Remoto.feature:14)
-Caused by: java.lang.AssertionError: ERROR en doAddTextFieldDocIdentPage
-	at org.testng.Assert.fail(Assert.java:85)
-	at aseguramientoBDD.pageObject.WebConvergente.P002_ConsultarCtePage.doAddTextFieldDocIdentPage(P002_ConsultarCtePage.java:49)
-	at aseguramientoBDD.pageObject.WebConvergente.P002_ConsultarCtePage.dniConsultingPage(P002_ConsultarCtePage.java:59)
-	at aseguramientoBDD.tests.Tienda_Alta.ingreso_del_consulto(Tienda_Alta.java:137)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at cucumber.runtime.Utils$1.call(Utils.java:40)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
-	at cucumber.runtime.Utils.invoke(Utils.java:34)
-	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)
-	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
-	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
-	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
-	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
-	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
-	at cucumber.runtime.model.CucumberScenarioOutline.run(CucumberScenarioOutline.java:46)
-	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
-	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
-	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.util.ArrayList.forEach(ArrayList.java:1249)
-	at org.testng.TestRunner.privateRun(TestRunner.java:770)
-	at org.testng.TestRunner.run(TestRunner.java:591)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-	at org.testng.TestNG.runSuites(TestNG.java:1032)
-	at org.testng.TestNG.run(TestNG.java:1000)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:110)
-Caused by: java.lang.NullPointerException
-	at aseguramientoBDD.helpers.BasePage.doAddTextField(BasePage.java:61)
-	at aseguramientoBDD.pageObject.WebConvergente.P002_ConsultarCtePage.doAddTextFieldDocIdentPage(P002_ConsultarCtePage.java:45)
-	... 46 more
-</pre></pre></td>
-                                                    </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </li>
-                </ul>
-        </div>
-    </div>
-
-    <div class='subview-right left'>
-        <div class='view-summary'>
-            <h5 class='exception-name'></h5>
-        </div>
-    </div>
-</div>
 <!-- exception view -->
 <div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
@@ -687,25 +378,25 @@ Caused by: java.lang.NullPointerException
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>8</div>
+					<div class='panel-lead'>5</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Aug 30, 2020 10:10:07 PM</div>
+					<div class='panel-lead'>Aug 13, 2020 05:43:27 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Aug 30, 2020 10:10:56 PM</div>
+			 		<div class='panel-lead'>Aug 13, 2020 05:46:48 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>49,045ms</div>
+					<div class='panel-lead'>200,940ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -722,11 +413,11 @@ Caused by: java.lang.NullPointerException
 						</tr>
 						<tr>
 							<td>@SmokeTest</td>
-							<td>0</td>
 							<td>2</td>
 							<td>0</td>
+							<td>0</td>
 							<td>
-									0%
+									100%
 							</td>
 						</tr>
 					</table>
@@ -742,31 +433,31 @@ Caused by: java.lang.NullPointerException
 
 		<script>
 			var statusGroup = {
-				passParent: 0,
-				failParent: 1,
+				passParent: 1,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 1,
+				exceptionsParent: 0,
 				
-				passChild: 0,
-				failChild: 2,
+				passChild: 2,
+				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				exceptionsChild: 2,
+				exceptionsChild: 0,
 				
-				passGrandChild: 2,
-				failGrandChild: 2,
+				passGrandChild: 5,
+				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 4,
+				skipGrandChild: 0,
 				infoGrandChild: 0,
-				exceptionsGrandChild: 6,
+				exceptionsGrandChild: 0,
 			};
 		</script>
 		

@@ -76,7 +76,7 @@ public class Hook {
 //    @After
     public static void closeBrowser(WebDriver webDriver) throws Exception {
         generarWordFile();
-        driver.quit();
+        //driver.quit();
     }
 
     public static void generarWordFile() throws Exception {
