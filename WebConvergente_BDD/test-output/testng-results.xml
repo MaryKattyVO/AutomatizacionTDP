@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="63004" started-at="2020-02-18T11:07:48 COT" finished-at="2020-02-18T11:08:51 COT">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:aseguramientoBDD.runner.TestRunner@32d2fa64]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Default test" duration-ms="63004" started-at="2020-02-18T11:07:48 COT" finished-at="2020-02-18T11:08:51 COT">
+      <class name="aseguramientoBDD.runner.TestRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:aseguramientoBDD.runner.TestRunner@32d2fa64]" name="setUpClass" is-config="true" duration-ms="614" started-at="2020-02-18T11:07:48 COT" finished-at="2020-02-18T11:07:48 COT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:aseguramientoBDD.runner.TestRunner@32d2fa64]" name="feature" duration-ms="62012" started-at="2020-02-18T11:07:49 COT" description="Runs Cucumber Feature" data-provider="features" finished-at="2020-02-18T11:08:51 COT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Vertificar si el cliente es Totalizacion y empezar el flujo]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:aseguramientoBDD.runner.TestRunner@32d2fa64]" name="tearDownClass" is-config="true" duration-ms="67" started-at="2020-02-18T11:08:51 COT" finished-at="2020-02-18T11:08:51 COT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- aseguramientoBDD.runner.TestRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
